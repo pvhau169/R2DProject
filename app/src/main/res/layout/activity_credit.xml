@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Credit"
+    android:background="@drawable/background"
+    android:padding="8dp"
+    >
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="200dp"
+        android:id="@+id/imageCard"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        />
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_centerInParent="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearLayout"
+        >
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/edtCardNumber"
+            android:hint="Card Number"
+            android:textColorHint="@android:color/black"
+
+            android:textColor="@android:color/black"
+            android:textSize="34sp"
+            android:inputType="phone"
+
+            />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/edtValidDate"
+            android:hint="Expiration Date"
+            android:textColorHint="@android:color/black"
+
+            android:textColor="@android:color/black"
+            android:textSize="34sp"
+
+            />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/edtYear"
+            android:hint="Year"
+            android:textColorHint="@android:color/black"
+
+            android:textColor="@android:color/black"
+            android:textSize="34sp"
+
+            />
+
+    </LinearLayout>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnScan"
+        android:layout_below="@+id/linearLayout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:text="Scan"
+        android:background="@color/btnSignActive"
+        />
+    <Button
+        android:id="@+id/btnCheckOut"
+        android:text="CheckOut"
+        android:textColor="@android:color/black"
+        android:shadowColor="@android:color/black"
+        android:background="@color/btnSignActive"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="8dp"
+
+        />
+</RelativeLayout>
