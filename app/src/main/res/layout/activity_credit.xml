@@ -33,7 +33,7 @@
             android:textColorHint="@android:color/black"
 
             android:textColor="@android:color/black"
-            android:textSize="34sp"
+            android:textSize="20sp"
             android:inputType="phone"
 
             />
@@ -46,7 +46,7 @@
             android:textColorHint="@android:color/black"
 
             android:textColor="@android:color/black"
-            android:textSize="34sp"
+            android:textSize="20sp"
 
             />
         <EditText
@@ -57,7 +57,18 @@
             android:textColorHint="@android:color/black"
 
             android:textColor="@android:color/black"
-            android:textSize="34sp"
+            android:textSize="20sp"
+
+            />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/edtSecurity"
+            android:hint="Security Number"
+            android:textColorHint="@android:color/black"
+
+            android:textColor="@android:color/black"
+            android:textSize="20sp"
 
             />
 

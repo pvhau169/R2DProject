@@ -56,7 +56,7 @@ public class Credit extends AppCompatActivity {
     TextView cardText;
     FirebaseVisionImage image = null;
     List<String> infoAfterProcess = new ArrayList<>();
-    EditText cardNumber, yearNumber, validDay;
+    EditText cardNumber, yearNumber, validDay, securityNumber;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
@@ -76,11 +76,18 @@ public class Credit extends AppCompatActivity {
         cardNumber = findViewById(R.id.edtCardNumber);
         yearNumber = findViewById(R.id.edtYear);
         validDay = findViewById(R.id.edtValidDate);
+        securityNumber = findViewById(R.id.edtSecurity);
         btnCheckOut = findViewById(R.id.btnCheckOut);
         btnCheckOut.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                showAlertDialog();
+                Log.d(TAG, "onClick: " + securityNumber.getText().toString());
+
+                if (securityNumber.getText().toString().isEmpty())
+                {
+                    Toast.makeText(Credit.this, "Please fill security number!", Toast.LENGTH_SHORT ).show();
+                }
+                else showAlertDialog();
             }
         });
         imageView.setImageResource(R.drawable.debit);
@@ -232,7 +239,7 @@ public class Credit extends AppCompatActivity {
                 //Create new Request
 
                 new Database(getBaseContext()).cleanCart();
-                Toast.makeText(Credit.this, "Thank you, Order Place", Toast.LENGTH_SHORT).show();
+                Toast.makeText(Credit.this, "Thank you, Order Place", Toast.LENGTH_LONG).show();
                 Intent menuIntent = new Intent(Credit.this, Home.class);
                 startActivity(menuIntent);
             }
